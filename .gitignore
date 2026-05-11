@@ -1,0 +1,44 @@
+# Dependencies
+node_modules/
+.yalc/
+yalc.lock
+
+# Build outputs
+.next/
+dist/
+build/
+public/packs/
+public/packs-test/
+tmp/
+.node-renderer-bundles/
+
+# Logs
+log/
+*.log
+npm-debug.log*
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Ruby
+.bundle/
+vendor/bundle/
+
+# Test & Coverage
+coverage/
+
+# Misc
+*.pid
+*.seed

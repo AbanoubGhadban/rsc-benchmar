@@ -1,0 +1,113 @@
+{
+  "timestamp": "2026-05-10T13:28:02.397Z",
+  "comparisons": [
+    {
+      "name": "simple-static",
+      "ssr": {
+        "duration": 0.09513504000000055,
+        "payload": 86
+      },
+      "rsc": {
+        "duration": 0.24101418000000038,
+        "payload": 999.12
+      },
+      "overhead": 153.33902208902106,
+      "payloadRatio": 11.61767441860465
+    },
+    {
+      "name": "with-props",
+      "ssr": {
+        "duration": 0.43709330000000096,
+        "payload": 368
+      },
+      "rsc": {
+        "duration": 0.8393717800000013,
+        "payload": 6318.1
+      },
+      "overhead": 92.03492252111838,
+      "payloadRatio": 17.16875
+    },
+    {
+      "name": "deep-tree",
+      "ssr": {
+        "duration": 4.146907500000001,
+        "payload": 22221
+      },
+      "rsc": {
+        "duration": 22.740641600000007,
+        "payload": 303881.1
+      },
+      "overhead": 448.3759066243942,
+      "payloadRatio": 13.675401647090588
+    },
+    {
+      "name": "large-list-100",
+      "ssr": {
+        "duration": 0.8219866600000045,
+        "payload": 11008
+      },
+      "rsc": {
+        "duration": 1.9006991799999786,
+        "payload": 28310.62
+      },
+      "overhead": 131.23236330866587,
+      "payloadRatio": 2.5718223110465117
+    },
+    {
+      "name": "large-list-1000",
+      "ssr": {
+        "duration": 7.3515074200000035,
+        "payload": 111808
+      },
+      "rsc": {
+        "duration": 30.70550752000002,
+        "payload": 340114.98
+      },
+      "overhead": 317.676345350135,
+      "payloadRatio": 3.041955674012593
+    },
+    {
+      "name": "data-heavy-100",
+      "ssr": {
+        "duration": 1.6263890199999969,
+        "payload": 11200
+      },
+      "rsc": {
+        "duration": 4.480986639999974,
+        "payload": 41848.44
+      },
+      "overhead": 175.5175167131897,
+      "payloadRatio": 3.7364678571428573
+    },
+    {
+      "name": "data-heavy-1000",
+      "ssr": {
+        "duration": 3.3144558199999983,
+        "payload": 11200
+      },
+      "rsc": {
+        "duration": 4.396859180000019,
+        "payload": 41848.32
+      },
+      "overhead": 32.65704594608299,
+      "payloadRatio": 3.7364571428571427
+    },
+    {
+      "name": "mixed-content",
+      "ssr": {
+        "duration": 0.2124982799999998,
+        "payload": 2831
+      },
+      "rsc": {
+        "duration": 0.6335383199999615,
+        "payload": 7561.54
+      },
+      "overhead": 198.1380931647833,
+      "payloadRatio": 2.670978452843518
+    }
+  ],
+  "summary": {
+    "avgOverhead": 193.6214019646738,
+    "avgPayloadRatio": 7.277438437949732
+  }
+}

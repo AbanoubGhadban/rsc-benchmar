@@ -1,0 +1,328 @@
+{
+  "blocking": [
+    {
+      "name": "traditional-ssr-blocking:simple-static",
+      "count": 100,
+      "duration": {
+        "min": 0.05395800000002282,
+        "max": 0.9667079999999828,
+        "mean": 0.08184672000000034,
+        "median": 0.05933399999997846,
+        "p95": 0.19425000000001091,
+        "p99": 0.9667079999999828
+      },
+      "payloadSize": {
+        "min": 86,
+        "max": 86,
+        "mean": 86
+      },
+      "memoryDelta": {
+        "mean": 5788.56
+      }
+    },
+    {
+      "name": "traditional-ssr-blocking:with-props",
+      "count": 100,
+      "duration": {
+        "min": 0.3274590000000046,
+        "max": 2.9775419999999997,
+        "mean": 0.5309128699999982,
+        "median": 0.3838750000000175,
+        "p95": 1.5254999999999939,
+        "p99": 2.9775419999999997
+      },
+      "payloadSize": {
+        "min": 368,
+        "max": 368,
+        "mean": 368
+      },
+      "memoryDelta": {
+        "mean": 19782.32
+      }
+    },
+    {
+      "name": "traditional-ssr-blocking:deep-tree",
+      "count": 100,
+      "duration": {
+        "min": 262.0477920000012,
+        "max": 592.0867920000001,
+        "mean": 301.9658333200001,
+        "median": 277.06545800000094,
+        "p95": 382.2233329999981,
+        "p99": 592.0867920000001
+      },
+      "payloadSize": {
+        "min": 1703927,
+        "max": 1703927,
+        "mean": 1703927
+      },
+      "memoryDelta": {
+        "mean": 205063.68
+      }
+    },
+    {
+      "name": "traditional-ssr-blocking:large-list-100",
+      "count": 100,
+      "duration": {
+        "min": 0.5144169999985024,
+        "max": 4.827750000011292,
+        "mean": 1.1455499800000688,
+        "median": 0.5482499999925494,
+        "p95": 2.9420419999951264,
+        "p99": 4.827750000011292
+      },
+      "payloadSize": {
+        "min": 11008,
+        "max": 11008,
+        "mean": 11008
+      },
+      "memoryDelta": {
+        "mean": -65962.96
+      }
+    },
+    {
+      "name": "traditional-ssr-blocking:large-list-1000",
+      "count": 100,
+      "duration": {
+        "min": 5.208124999990105,
+        "max": 17.54245799999626,
+        "mean": 6.081397099999886,
+        "median": 5.76308400000562,
+        "p95": 7.504999999990105,
+        "p99": 17.54245799999626
+      },
+      "payloadSize": {
+        "min": 111808,
+        "max": 111808,
+        "mean": 111808
+      },
+      "memoryDelta": {
+        "mean": -5018737.84
+      }
+    },
+    {
+      "name": "traditional-ssr-blocking:data-heavy-100",
+      "count": 100,
+      "duration": {
+        "min": 1.1610829999990528,
+        "max": 5.7557919999962905,
+        "mean": 1.5789466299997001,
+        "median": 1.203624999994645,
+        "p95": 5.135290999998688,
+        "p99": 5.7557919999962905
+      },
+      "payloadSize": {
+        "min": 11198,
+        "max": 11198,
+        "mean": 11198
+      },
+      "memoryDelta": {
+        "mean": 312833.6
+      }
+    },
+    {
+      "name": "traditional-ssr-blocking:data-heavy-1000",
+      "count": 100,
+      "duration": {
+        "min": 1.1303340000013122,
+        "max": 2.849791999993613,
+        "mean": 1.2709183699999995,
+        "median": 1.1682920000021113,
+        "p95": 2.2207499999931315,
+        "p99": 2.849791999993613
+      },
+      "payloadSize": {
+        "min": 11198,
+        "max": 11198,
+        "mean": 11198
+      },
+      "memoryDelta": {
+        "mean": 282291.92
+      }
+    },
+    {
+      "name": "traditional-ssr-blocking:mixed-content",
+      "count": 100,
+      "duration": {
+        "min": 0.15987499999755528,
+        "max": 1.2089580000028946,
+        "mean": 0.18293585999985226,
+        "median": 0.1652499999909196,
+        "p95": 0.2031669999996666,
+        "p99": 1.2089580000028946
+      },
+      "payloadSize": {
+        "min": 2831,
+        "max": 2831,
+        "mean": 2831
+      },
+      "memoryDelta": {
+        "mean": 43529.04
+      }
+    }
+  ],
+  "streaming": [
+    {
+      "name": "traditional-ssr-streaming:simple-static",
+      "count": 100,
+      "duration": {
+        "min": 0.07175000000000864,
+        "max": 1.616500000000002,
+        "mean": 0.11524283000000053,
+        "median": 0.07845900000000938,
+        "p95": 0.25799999999998136,
+        "p99": 1.616500000000002
+      },
+      "payloadSize": {
+        "min": 86,
+        "max": 86,
+        "mean": 86
+      },
+      "memoryDelta": {
+        "mean": 7749.68
+      }
+    },
+    {
+      "name": "traditional-ssr-streaming:with-props",
+      "count": 100,
+      "duration": {
+        "min": 0.3435000000000059,
+        "max": 2.131167000000005,
+        "mean": 0.48749416000000195,
+        "median": 0.4027080000000183,
+        "p95": 0.9702080000000137,
+        "p99": 2.131167000000005
+      },
+      "payloadSize": {
+        "min": 368,
+        "max": 368,
+        "mean": 368
+      },
+      "memoryDelta": {
+        "mean": 20110.48
+      }
+    },
+    {
+      "name": "traditional-ssr-streaming:deep-tree",
+      "count": 100,
+      "duration": {
+        "min": 270.7217079999973,
+        "max": 535.4696670000048,
+        "mean": 316.7137404100003,
+        "median": 289.5981250000041,
+        "p95": 413.390625,
+        "p99": 535.4696670000048
+      },
+      "payloadSize": {
+        "min": 1703927,
+        "max": 1703927,
+        "mean": 1703927
+      },
+      "memoryDelta": {
+        "mean": 6280956.16
+      }
+    },
+    {
+      "name": "traditional-ssr-streaming:large-list-100",
+      "count": 100,
+      "duration": {
+        "min": 0.6113330000080168,
+        "max": 5.208750000005239,
+        "mean": 1.2603125200004432,
+        "median": 0.6580830000020796,
+        "p95": 3.1342920000024606,
+        "p99": 5.208750000005239
+      },
+      "payloadSize": {
+        "min": 11008,
+        "max": 11008,
+        "mean": 11008
+      },
+      "memoryDelta": {
+        "mean": -25118.16
+      }
+    },
+    {
+      "name": "traditional-ssr-streaming:large-list-1000",
+      "count": 100,
+      "duration": {
+        "min": 6.02225000000908,
+        "max": 29.609375,
+        "mean": 7.401436260000337,
+        "median": 6.648207999998704,
+        "p95": 7.865250000002561,
+        "p99": 29.609375
+      },
+      "payloadSize": {
+        "min": 111808,
+        "max": 111808,
+        "mean": 111808
+      },
+      "memoryDelta": {
+        "mean": 629869.68
+      }
+    },
+    {
+      "name": "traditional-ssr-streaming:data-heavy-100",
+      "count": 100,
+      "duration": {
+        "min": 1.2046249999984866,
+        "max": 8.179082999995444,
+        "mean": 2.06312670000043,
+        "median": 1.2869170000049053,
+        "p95": 6.394417000003159,
+        "p99": 8.179082999995444
+      },
+      "payloadSize": {
+        "min": 11198,
+        "max": 11198,
+        "mean": 11198
+      },
+      "memoryDelta": {
+        "mean": 241710.08
+      }
+    },
+    {
+      "name": "traditional-ssr-streaming:data-heavy-1000",
+      "count": 100,
+      "duration": {
+        "min": 1.2032499999913853,
+        "max": 3.151000000012573,
+        "mean": 1.3800829200005682,
+        "median": 1.2487499999988358,
+        "p95": 2.483542000001762,
+        "p99": 3.151000000012573
+      },
+      "payloadSize": {
+        "min": 11198,
+        "max": 11198,
+        "mean": 11198
+      },
+      "memoryDelta": {
+        "mean": 170892.72
+      }
+    },
+    {
+      "name": "traditional-ssr-streaming:mixed-content",
+      "count": 100,
+      "duration": {
+        "min": 0.17754199999035336,
+        "max": 1.2475830000039423,
+        "mean": 0.1996083699990413,
+        "median": 0.1844580000033602,
+        "p95": 0.24520799999299925,
+        "p99": 1.2475830000039423
+      },
+      "payloadSize": {
+        "min": 2831,
+        "max": 2831,
+        "mean": 2831
+      },
+      "memoryDelta": {
+        "mean": 45900.56
+      }
+    }
+  ],
+  "timestamp": "2026-05-10T13:05:32.272Z",
+  "type": "traditional-ssr"
+}

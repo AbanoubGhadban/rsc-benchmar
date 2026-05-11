@@ -1,0 +1,167 @@
+{
+  "rscSerialization": [
+    {
+      "name": "rsc-serialization:simple-static",
+      "count": 100,
+      "duration": {
+        "min": 0.12404199999997445,
+        "max": 2.405833000000001,
+        "mean": 0.19976584000000003,
+        "median": 0.14770800000002282,
+        "p95": 0.3361250000000098,
+        "p99": 2.405833000000001
+      },
+      "payloadSize": {
+        "min": 1095,
+        "max": 1109,
+        "mean": 1107.72
+      },
+      "memoryDelta": {
+        "mean": 11649.04
+      }
+    },
+    {
+      "name": "rsc-serialization:with-props",
+      "count": 100,
+      "duration": {
+        "min": 0.6859999999999786,
+        "max": 76.417709,
+        "mean": 2.986351630000001,
+        "median": 1.7357920000000036,
+        "p95": 5.843166999999994,
+        "p99": 76.417709
+      },
+      "payloadSize": {
+        "min": 6415,
+        "max": 6428,
+        "mean": 6425.65
+      },
+      "memoryDelta": {
+        "mean": 63136.08
+      }
+    },
+    {
+      "name": "rsc-serialization:deep-tree",
+      "count": 100,
+      "duration": {
+        "min": 1754.5098339999968,
+        "max": 8527.153583,
+        "mean": 3304.0869929300015,
+        "median": 2952.937957999995,
+        "p95": 6573.094542000006,
+        "p99": 8527.153583
+      },
+      "payloadSize": {
+        "min": 25216571,
+        "max": 25330306,
+        "mean": 25307597.75
+      },
+      "memoryDelta": {
+        "mean": 3704733.52
+      }
+    },
+    {
+      "name": "rsc-serialization:large-list-100",
+      "count": 100,
+      "duration": {
+        "min": 1.3140000000130385,
+        "max": 16.613707999989856,
+        "mean": 3.4513441100053024,
+        "median": 1.5783750000409782,
+        "p95": 9.841000000014901,
+        "p99": 16.613707999989856
+      },
+      "payloadSize": {
+        "min": 28234,
+        "max": 59994,
+        "mean": 35633.6
+      },
+      "memoryDelta": {
+        "mean": 111802
+      }
+    },
+    {
+      "name": "rsc-serialization:large-list-1000",
+      "count": 100,
+      "duration": {
+        "min": 13.927458000020124,
+        "max": 96.24629199999617,
+        "mean": 27.37033754000091,
+        "median": 20.28341700002784,
+        "p95": 78.3011669999687,
+        "p99": 96.24629199999617
+      },
+      "payloadSize": {
+        "min": 298272,
+        "max": 610828,
+        "mean": 329770.89
+      },
+      "memoryDelta": {
+        "mean": -137608.48
+      }
+    },
+    {
+      "name": "rsc-serialization:data-heavy-100",
+      "count": 100,
+      "duration": {
+        "min": 2.5292499999632128,
+        "max": 22.801374999980908,
+        "mean": 4.169231200000504,
+        "median": 3.006959000020288,
+        "p95": 9.835374999966007,
+        "p99": 22.801374999980908
+      },
+      "payloadSize": {
+        "min": 41811,
+        "max": 41885,
+        "mean": 41862.8
+      },
+      "memoryDelta": {
+        "mean": -936736.96
+      }
+    },
+    {
+      "name": "rsc-serialization:data-heavy-1000",
+      "count": 100,
+      "duration": {
+        "min": 2.4591660000151023,
+        "max": 18.87699999997858,
+        "mean": 5.5545274899998915,
+        "median": 2.953832999977749,
+        "p95": 17.716917000012472,
+        "p99": 18.87699999997858
+      },
+      "payloadSize": {
+        "min": 41812,
+        "max": 214630,
+        "mean": 70040.98
+      },
+      "memoryDelta": {
+        "mean": 415286.08
+      }
+    },
+    {
+      "name": "rsc-serialization:mixed-content",
+      "count": 100,
+      "duration": {
+        "min": 0.38929099997039884,
+        "max": 3.887916000036057,
+        "mean": 0.49891121000400745,
+        "median": 0.42612499999813735,
+        "p95": 0.49708399997325614,
+        "p99": 3.887916000036057
+      },
+      "payloadSize": {
+        "min": 7549,
+        "max": 7565,
+        "mean": 7561.78
+      },
+      "memoryDelta": {
+        "mean": 140836.64
+      }
+    }
+  ],
+  "comparison": [],
+  "timestamp": "2026-05-10T13:09:39.941Z",
+  "type": "raw-rsc"
+}

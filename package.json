@@ -1,0 +1,42 @@
+{
+  "name": "rsc-benchmark",
+  "version": "1.0.0",
+  "description": "Comprehensive RSC vs Traditional SSR benchmark suite",
+  "type": "module",
+  "scripts": {
+    "bench:all": "node scripts/run-all.js",
+    "bench:traditional": "node benchmarks/traditional-ssr/bench.js",
+    "bench:rsc-raw": "node --conditions=react-server benchmarks/raw-rsc/bench.js",
+    "bench:rsc-ssr": "node benchmarks/rsc-ssr/bench.js",
+    "bench:patterns": "node benchmarks/patterns/bench.js",
+    "bench:load": "node --conditions=react-server benchmarks/http-server/load-test.js",
+    "bench:nextjs": "cd benchmarks/frameworks/nextjs && npm run bench",
+    "bench:compare": "node scripts/compare-results.js",
+    "report": "node scripts/generate-report.js",
+    "server:traditional": "node benchmarks/http-server/server-traditional.js",
+    "server:rsc": "node --conditions=react-server benchmarks/http-server/server-rsc.js",
+    "db:setup": "psql -d rsc_benchmark -f shared/db/schema.sql",
+    "db:seed": "tsx shared/seed/run-seed.ts",
+    "shared:build": "tsc -p shared/tsconfig.json",
+    "lighthouse": "lighthouse --output json --output html --chrome-flags='--headless'"
+  },
+  "dependencies": {
+    "pg": "^8.13.0",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "react-on-rails": "file:.yalc/react-on-rails",
+    "react-server-dom-webpack": "^19.2.6"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/pg": "^8.11.0",
+    "autocannon": "^8.0.0",
+    "chalk": "^5.3.0",
+    "cli-table3": "^0.6.5",
+    "lighthouse": "^12.0.0",
+    "mitata": "^1.0.10",
+    "tinybench": "^3.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.6.0"
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "timestamp": "2026-05-10T13:16:06.750Z",
+  "comparisons": [
+    {
+      "name": "waterfall-fetch",
+      "description": "Sequential data fetches",
+      "expectedWinner": "tie",
+      "actualWinner": "tie",
+      "ssr": {
+        "duration": 17.31654856666666,
+        "payload": 75
+      },
+      "rsc": {
+        "duration": 18.600861233333333,
+        "payload": 2475.7
+      },
+      "overhead": 7.4166781083552555
+    },
+    {
+      "name": "parallel-fetch",
+      "description": "Parallel data fetches (RSC sweet spot)",
+      "expectedWinner": "rsc",
+      "actualWinner": "ssr",
+      "ssr": {
+        "duration": 6.297251499999982,
+        "payload": 75
+      },
+      "rsc": {
+        "duration": 7.15252493333334,
+        "payload": 2469.6666666666665
+      },
+      "overhead": 13.581694066583818
+    },
+    {
+      "name": "compute-light",
+      "description": "Light server computation",
+      "expectedWinner": "tie",
+      "actualWinner": "rsc",
+      "ssr": {
+        "duration": 0.23547086666666625,
+        "payload": 23
+      },
+      "rsc": {
+        "duration": 0.16593333333333174,
+        "payload": 667.4666666666667
+      },
+      "overhead": -29.5312682701305
+    },
+    {
+      "name": "compute-heavy",
+      "description": "Heavy computation (RSC: no client JS)",
+      "expectedWinner": "rsc",
+      "actualWinner": "ssr",
+      "ssr": {
+        "duration": 0.6136638666666613,
+        "payload": 23
+      },
+      "rsc": {
+        "duration": 0.7147319000000191,
+        "payload": 668
+      },
+      "overhead": 16.469608009079238
+    },
+    {
+      "name": "static-small",
+      "description": "Small static content",
+      "expectedWinner": "tie",
+      "actualWinner": "ssr",
+      "ssr": {
+        "duration": 0.21902659999998378,
+        "payload": 779
+      },
+      "rsc": {
+        "duration": 0.44033193333334564,
+        "payload": 2918.8333333333335
+      },
+      "overhead": 101.04039113668306
+    },
+    {
+      "name": "static-large",
+      "description": "Large static (RSC: no hydration)",
+      "expectedWinner": "rsc",
+      "actualWinner": "ssr",
+      "ssr": {
+        "duration": 1.4867569333333297,
+        "payload": 7709
+      },
+      "rsc": {
+        "duration": 2.7355068999999883,
+        "payload": 26275.1
+      },
+      "overhead": 83.9915347740766
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "timestamp": "2026-05-10T15:50:00.000Z",
+  "framework": "React on Rails Pro",
+  "mode": "development",
+  "database": "SQLite",
+  "results": {
+    "/heavy_benchmark": {
+      "name": "RSC (async props)",
+      "avgReqPerSec": 17.8,
+      "avgLatency": 547.68,
+      "p50Latency": 524,
+      "p99Latency": 908
+    },
+    "/heavy_benchmark_traditional": {
+      "name": "Traditional SSR",
+      "avgReqPerSec": 17.2,
+      "avgLatency": 568.34,
+      "p50Latency": 559,
+      "p99Latency": 825
+    },
+    "/mega_benchmark": {
+      "name": "RSC Mega (async props)",
+      "avgReqPerSec": 17.8,
+      "avgLatency": 544.51,
+      "p50Latency": 551,
+      "p99Latency": 670
+    },
+    "/mega_benchmark_traditional": {
+      "name": "Traditional Mega SSR",
+      "avgReqPerSec": 16.7,
+      "avgLatency": 580.62,
+      "p50Latency": 569,
+      "p99Latency": 799
+    }
+  },
+  "summary": {
+    "heavy_rsc_vs_trad": "+3.5%",
+    "mega_rsc_vs_trad": "+6.6%",
+    "winner": "RSC"
+  }
+}
