@@ -1,0 +1,15 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 10 } %>
+  database: rsc_bench
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+  database: rsc_bench_test
+
+production:
+  <<: *default

@@ -1,0 +1,36 @@
+<%= stream_react_component_with_async_props(
+  "HeavyBenchmark",
+  props: { timestamp: Time.now.to_i * 1000 }
+) do |emit|
+  # Stats query
+  stats = {
+    user_count: User.count,
+    post_count: Post.count,
+    comment_count: Comment.count
+  }
+  emit.call("stats", stats)
+
+  # Users query
+  users = User.limit(100).select(:id, :name, :email).map do |u|
+    { id: u.id, name: u.name, email: u.email }
+  end
+  emit.call("users", users)
+
+  # Posts with author query
+  posts = Post.joins(:user)
+              .limit(50)
+              .select("posts.id, posts.title, posts.body, users.name as author_name")
+              .map do |p|
+    { id: p.id, title: p.title, body: p.body, author_name: p.author_name }
+  end
+  emit.call("posts", posts)
+
+  # Comments with user query
+  comments = Comment.joins(:user)
+                    .limit(100)
+                    .select("comments.id, comments.body, users.name as user_name")
+                    .map do |c|
+    { id: c.id, body: c.body, user_name: c.user_name }
+  end
+  emit.call("comments", comments)
+end %>
