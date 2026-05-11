@@ -1,36 +1,37 @@
+<%# FAIRNESS FIX: pluck instead of .select(:cols).map { hash } — drops AR
+    hydration cost (no 500 + 1000 + 5000 AR object instantiations).
+    Parallel queries via Threads / Async were tested but crash Ruby 3.3.0 +
+    Rails 7.2's AR pool — left as sequential here. Streaming itself (the
+    flush-before-next-emit behavior) is unchanged. %>
+
 <%= stream_react_component_with_async_props(
   "MegaBenchmark",
   props: { timestamp: Time.now.to_i * 1000 }
 ) do |emit|
-  # Stats query
-  stats = {
-    user_count: User.count,
-    post_count: Post.count,
-    comment_count: Comment.count
-  }
-  emit.call("stats", stats)
+  stats_row = ActiveRecord::Base.connection.select_one(<<~SQL)
+    SELECT (SELECT COUNT(*) FROM users) AS user_count,
+           (SELECT COUNT(*) FROM posts) AS post_count,
+           (SELECT COUNT(*) FROM comments) AS comment_count
+  SQL
+  emit.call("stats", {
+    user_count:    stats_row["user_count"],
+    post_count:    stats_row["post_count"],
+    comment_count: stats_row["comment_count"],
+  })
 
-  # ALL Users query
-  users = User.select(:id, :name, :email).order(:id).map do |u|
-    { id: u.id, name: u.name, email: u.email }
-  end
-  emit.call("users", users)
+  emit.call("users", User.order(:id).pluck(:id, :name, :email).map { |id, name, email|
+    { id:, name:, email: }
+  })
 
-  # ALL Posts with author query
-  posts = Post.joins(:user)
-              .select("posts.id, posts.title, posts.body, users.name as author_name")
-              .order("posts.id")
-              .map do |p|
-    { id: p.id, title: p.title, body: p.body, author_name: p.author_name }
-  end
-  emit.call("posts", posts)
+  emit.call("posts", Post.joins(:user).order("posts.id")
+                         .pluck("posts.id", "posts.title", "posts.body", "users.name")
+                         .map { |id, title, body, author_name|
+    { id:, title:, body:, author_name: }
+  })
 
-  # ALL Comments with user query
-  comments = Comment.joins(:user)
-                    .select("comments.id, comments.body, users.name as user_name")
-                    .order("comments.id")
-                    .map do |c|
-    { id: c.id, body: c.body, user_name: c.user_name }
-  end
-  emit.call("comments", comments)
+  emit.call("comments", Comment.joins(:user).order("comments.id")
+                                .pluck("comments.id", "comments.body", "users.name")
+                                .map { |id, body, user_name|
+    { id:, body:, user_name: }
+  })
 end %>

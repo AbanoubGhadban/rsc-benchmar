@@ -38,5 +38,11 @@ module RorRsc
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    # FAIRNESS FIX 1: Match Next.js default — compress dynamic responses with gzip.
+    # Next.js `next start` compresses HTML responses by default; Rails does not.
+    # Without this, ROR Pro ships uncompressed multi-megabyte HTML while Next.js
+    # ships gzipped — making any "Total Time" comparison meaningless.
+    config.middleware.use Rack::Deflater
   end
 end
