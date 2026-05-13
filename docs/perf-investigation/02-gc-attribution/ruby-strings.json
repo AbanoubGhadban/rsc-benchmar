@@ -1,0 +1,50 @@
+[
+  {
+    "label": "JSON.generate(props)  -> 1.16 MB string",
+    "wall_ms": 43.6,
+    "gc_ms": 0,
+    "obj_per_iter": 1,
+    "minor": 1,
+    "major": 0
+  },
+  {
+    "label": "props.to_json (Rails Hash#to_json)",
+    "wall_ms": 50.2,
+    "gc_ms": 0,
+    "obj_per_iter": 2,
+    "minor": 1,
+    "major": 0
+  },
+  {
+    "label": "URI.encode_www_form_component on 1.1 MB",
+    "wall_ms": 3564.5,
+    "gc_ms": 751,
+    "obj_per_iter": 516082,
+    "minor": 3116,
+    "major": 3
+  },
+  {
+    "label": "String.new(2.18 MB) — simulate receive",
+    "wall_ms": 30.4,
+    "gc_ms": 1,
+    "obj_per_iter": 3,
+    "minor": 4,
+    "major": 0
+  },
+  {
+    "label": "View-wrap: layout_open + render + layout_close",
+    "wall_ms": 27.3,
+    "gc_ms": 1,
+    "obj_per_iter": 4,
+    "minor": 3,
+    "major": 0
+  },
+  {
+    "label": "FULL pipeline simulation (a + c + e)",
+    "wall_ms": 3533.8,
+    "gc_ms": 737,
+    "obj_per_iter": 516090,
+    "minor": 3121,
+    "major": 3
+  }
+]

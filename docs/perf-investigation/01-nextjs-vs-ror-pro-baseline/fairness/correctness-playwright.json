@@ -1,0 +1,48 @@
+{
+  "nextjs": {
+    "url": "http://127.0.0.1:3000/bench/3",
+    "hydrationMarkPresent": true,
+    "domCounts": {
+      "sections": 12,
+      "listItems": 90,
+      "tableRows": 48,
+      "cells": 360,
+      "inputs": 15,
+      "textareas": 3,
+      "forms": 3,
+      "buttons": 103,
+      "modalsHidden": 3,
+      "pageScale": "3"
+    },
+    "counterBefore": "0",
+    "counterAfter": "1",
+    "clickError": null,
+    "consoleErrorCount": 0,
+    "consoleWarningCount": 0,
+    "consoleAll": [],
+    "pageErrors": []
+  },
+  "ror-pro": {
+    "url": "http://127.0.0.1:4000/bench/3",
+    "hydrationMarkPresent": true,
+    "domCounts": {
+      "sections": 12,
+      "listItems": 90,
+      "tableRows": 48,
+      "cells": 360,
+      "inputs": 15,
+      "textareas": 3,
+      "forms": 3,
+      "buttons": 103,
+      "modalsHidden": 3,
+      "pageScale": "3"
+    },
+    "counterBefore": "0",
+    "counterAfter": "1",
+    "clickError": null,
+    "consoleErrorCount": 0,
+    "consoleWarningCount": 0,
+    "consoleAll": [],
+    "pageErrors": []
+  }
+}
