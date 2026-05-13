@@ -1,7 +1,9 @@
 source "https://rubygems.org"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
+gem "connection_pool", "< 3.0"
 gem "rails", "~> 7.2.3", ">= 7.2.3.1"
+gem "connection_pool", "< 3.0"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 # Use PostgreSQL for fair comparison with Next.js
@@ -43,7 +45,7 @@ group :development do
 end
 
 # React on Rails (local worktree for benchmark)
-gem "react_on_rails", path: "/Users/abanoub/react_on_rails_benchmark/react_on_rails"
-gem "react_on_rails_pro", path: "/Users/abanoub/react_on_rails_benchmark/react_on_rails_pro"
+gem "react_on_rails", path: "/mnt/ssd/react_on_rails_v16.3/react_on_rails"
+gem "react_on_rails_pro", path: "/mnt/ssd/react_on_rails_v16.3/react_on_rails_pro"
 gem "shakapacker", "~> 8.0"
 

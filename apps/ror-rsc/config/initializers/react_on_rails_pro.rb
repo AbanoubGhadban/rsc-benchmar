@@ -20,8 +20,8 @@ ReactOnRailsPro.configure do |config|
   # Applies to all rendering engines.
   config.prerender_caching = false
 
-  # Get timing of server render calls
-  config.tracing = Rails.env.development?
+  # Get timing of server render calls (forced ON for the instrumentation experiment)
+  config.tracing = true
 
   # React Server Components configuration
   config.enable_rsc_support = true

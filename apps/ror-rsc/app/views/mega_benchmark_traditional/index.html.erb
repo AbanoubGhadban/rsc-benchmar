@@ -1,1 +1,14 @@
-<%= react_component("MegaBenchmarkTraditional", props: @props, prerender: true) %>
+<%# INSTRUMENTED — split renderer round-trip into JSON-dump + IPC+render+response %>
+<% require "benchmark" %>
+<% props_json = nil
+   t_json   = Benchmark.realtime { props_json = @props.to_json }
+   t_render = nil
+   _html    = nil
+   t_render = Benchmark.realtime { _html = react_component("MegaBenchmarkTraditional", props: @props, prerender: true) }
+   Rails.logger.info(
+     "[INSTR] props_bytes=#{props_json.bytesize} " \
+     "json_dump_ms=#{(t_json*1000).round(2)} " \
+     "react_component_total_ms=#{(t_render*1000).round(2)} " \
+     "html_bytes=#{_html.bytesize}"
+   ) %>
+<%= _html %>

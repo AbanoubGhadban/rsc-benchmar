@@ -1,0 +1,78 @@
+[
+  {
+    "name": "nextjs",
+    "idle": {
+      "n": 30,
+      "min": 168516,
+      "max": 168516,
+      "mean": 168516,
+      "median": 168516,
+      "p95": 168516
+    },
+    "underLoad": {
+      "n": 200,
+      "min": 185068,
+      "max": 285204,
+      "mean": 248185,
+      "median": 242148,
+      "p95": 283020
+    },
+    "cooldown": {
+      "n": 30,
+      "min": 271808,
+      "max": 283636,
+      "mean": 272317,
+      "median": 271808,
+      "p95": 275244
+    },
+    "finalSnapshot": {
+      "total": 271808,
+      "parts": {
+        "next": 60444,
+        "children": [
+          1764,
+          209600
+        ]
+      }
+    },
+    "deltaIdleToPeak_KB": 116688
+  },
+  {
+    "name": "ror-pro",
+    "idle": {
+      "n": 30,
+      "min": 369980,
+      "max": 369980,
+      "mean": 369980,
+      "median": 369980,
+      "p95": 369980
+    },
+    "underLoad": {
+      "n": 200,
+      "min": 365940,
+      "max": 379040,
+      "mean": 372932,
+      "median": 373012,
+      "p95": 377776
+    },
+    "cooldown": {
+      "n": 30,
+      "min": 374236,
+      "max": 376396,
+      "mean": 376324,
+      "median": 376396,
+      "p95": 376396
+    },
+    "finalSnapshot": {
+      "total": 376396,
+      "parts": {
+        "rails": 196596,
+        "nodeRenderer": 57828,
+        "nodeRenderer_children": [
+          121972
+        ]
+      }
+    },
+    "deltaIdleToPeak_KB": 9060
+  }
+]

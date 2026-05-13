@@ -35,6 +35,7 @@ Thumbs.db
 # Ruby
 .bundle/
 vendor/bundle/
+**/vendor/bundle/
 
 # Test & Coverage
 coverage/

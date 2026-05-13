@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get 'heavy_benchmark_traditional', to: 'heavy_benchmark_traditional#index'
   get 'mega_benchmark', to: 'mega_benchmark#index'
   get 'mega_benchmark_traditional', to: 'mega_benchmark_traditional#index'
+  get 'mega_benchmark_traditional/build_only', to: 'mega_benchmark_traditional#build_only'
+  get 'mega_benchmark_traditional/send_only',  to: 'mega_benchmark_traditional#send_only'
   rsc_payload_route
   get 'hello_world', to: 'hello_world#index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

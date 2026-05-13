@@ -1,0 +1,14 @@
+{
+  "hydrated": true,
+  "consoleErrors": 0,
+  "consoleWarnings": 0,
+  "pageErrors": 0,
+  "counts": {
+    "products": 24,
+    "reviews": 36,
+    "pager": 5,
+    "brands": 25,
+    "swatches": 8
+  },
+  "addedToCart": "0"
+}

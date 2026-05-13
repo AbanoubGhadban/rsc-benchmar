@@ -1,0 +1,100 @@
+{
+  "nextjs": {
+    "url": "http://127.0.0.1:3000/shop/3",
+    "hydrated": true,
+    "initial": {
+      "productCards": 24,
+      "reviews": 18,
+      "pagerButtons": 4,
+      "sidebarCheckboxes": 21,
+      "swatches": 8,
+      "cartCount": "0",
+      "wishlistCount": "0",
+      "sortDefault": "featured",
+      "pageScale": "3"
+    },
+    "afterAddToCart": {
+      "cartCount": "1",
+      "drawerOpen": true,
+      "drawerItems": 1
+    },
+    "afterIncrement": {
+      "cartCount": "2",
+      "qtyDisplay": "2"
+    },
+    "afterClose": {
+      "drawerOpen": false
+    },
+    "afterWishlist": {
+      "wishlistCount": "1",
+      "firstCardIcon": "♥"
+    },
+    "afterSort": {
+      "isAscending": false,
+      "firstThreePrices": [
+        19.99,
+        25.99,
+        30.99
+      ]
+    },
+    "afterBrandFilter": {
+      "productsShown": 3,
+      "countLabel": "3 of 36 products"
+    },
+    "afterNewsletter": {
+      "buttonText": "Thanks!"
+    },
+    "consoleErrors": [],
+    "consoleWarnings": [],
+    "pageErrors": []
+  },
+  "ror-pro": {
+    "url": "http://127.0.0.1:4000/shop/3",
+    "hydrated": true,
+    "initial": {
+      "productCards": 24,
+      "reviews": 18,
+      "pagerButtons": 4,
+      "sidebarCheckboxes": 21,
+      "swatches": 8,
+      "cartCount": "0",
+      "wishlistCount": "0",
+      "sortDefault": "featured",
+      "pageScale": "3"
+    },
+    "afterAddToCart": {
+      "cartCount": "1",
+      "drawerOpen": true,
+      "drawerItems": 1
+    },
+    "afterIncrement": {
+      "cartCount": "2",
+      "qtyDisplay": "2"
+    },
+    "afterClose": {
+      "drawerOpen": false
+    },
+    "afterWishlist": {
+      "wishlistCount": "1",
+      "firstCardIcon": "♥"
+    },
+    "afterSort": {
+      "isAscending": false,
+      "firstThreePrices": [
+        19.99,
+        25.99,
+        30.99
+      ]
+    },
+    "afterBrandFilter": {
+      "productsShown": 3,
+      "countLabel": "3 of 36 products"
+    },
+    "afterNewsletter": {
+      "buttonText": "Thanks!"
+    },
+    "consoleErrors": [],
+    "consoleWarnings": [],
+    "pageErrors": []
+  }
+}
