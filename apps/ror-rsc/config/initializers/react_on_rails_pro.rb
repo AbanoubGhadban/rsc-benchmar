@@ -9,8 +9,13 @@ ReactOnRailsPro.configure do |config|
   # See value in renderer/node-renderer.js
   config.renderer_password = ENV.fetch("RENDERER_PASSWORD", "devPassword")
 
-  config.ssr_timeout = 5
+  config.ssr_timeout = 30
   config.renderer_request_retry_limit = 1
+  # Bumped for issue #3280 c=50 autocannon. Same value used for both baseline
+  # and after, so the comparison stays apples-to-apples.
+  config.renderer_http_pool_size = 64
+  config.renderer_http_pool_timeout = 30
+  config.renderer_http_pool_warn_timeout = 30
   config.renderer_use_fallback_exec_js = Rails.env.development?
 
   # If you want Honeybadger or Sentry on the Node renderer side to report rendering errors

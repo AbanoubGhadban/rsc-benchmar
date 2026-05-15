@@ -4,7 +4,7 @@
 
 require "json"
 
-RAILS_LOG = "/mnt/ssd/my-demos/rsc-benchmark/forks/rsc-benchmar/apps/ror-rsc/log/rails-prod.log"
+RAILS_LOG = ENV.fetch("RAILS_LOG") { File.expand_path("../../../apps/ror-rsc/log/production.log", __dir__) }
 RUN_DIR   = ARGV[0] or abort("usage: analyze.rb <run-dir>")
 
 # Read all marker pairs
@@ -69,7 +69,7 @@ end
 # window it falls inside.
 buckets = Hash.new { |h, k| h[k] = [] }
 requests.each_value do |r|
-  next unless r[:completed_line] && r[:gc_ms] && r[:httpx_round_trip_ms]
+  next unless r[:completed_line] && r[:gc_ms]
   # Find window where start_line < completed_line < end_line
   window_start.each_key do |label|
     s = window_start[label]
@@ -80,15 +80,16 @@ requests.each_value do |r|
 end
 
 def stats(arr)
+  arr = arr.compact
   return { n: 0 } if arr.empty?
   s = arr.sort
   n = s.length
-  pct = ->(q) { s[((n - 1) * q).floor] }
+  pct = ->(q) { v = s[((n - 1) * q).floor]; v.is_a?(Numeric) ? v.round(2) : nil }
   {
     n: n,
-    p50: pct.call(0.5).round(2),
-    p95: pct.call(0.95).round(2),
-    mean: (s.sum.to_f / n).round(2),
+    p50: pct.call(0.5),
+    p95: pct.call(0.95),
+    mean: (s.sum(0.0) / n).round(2),
     min: s.min,
     max: s.max,
   }

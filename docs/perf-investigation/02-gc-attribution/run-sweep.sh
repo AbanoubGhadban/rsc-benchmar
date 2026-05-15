@@ -6,7 +6,7 @@
 
 set -u
 RUN_DIR="$1"
-RAILS_LOG="/mnt/ssd/my-demos/rsc-benchmark/forks/rsc-benchmar/apps/ror-rsc/log/rails-prod.log"
+RAILS_LOG="${RAILS_LOG:-$(cd "$(dirname "$0")/../../.." && pwd)/apps/ror-rsc/log/production.log}"
 mkdir -p "$RUN_DIR/per-point"
 
 POINTS=(

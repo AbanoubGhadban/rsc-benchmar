@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 require "json"
 
-RAILS_LOG = "/mnt/ssd/my-demos/rsc-benchmark/forks/rsc-benchmar/apps/ror-rsc/log/rails-prod.log"
+RAILS_LOG = ENV.fetch("RAILS_LOG") { File.expand_path("../../../apps/ror-rsc/log/production.log", __dir__) }
 RUN_DIR   = ARGV[0] or abort("usage: analyze-iso.rb <run-dir>")
 
 # Read markers
